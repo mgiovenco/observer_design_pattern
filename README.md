@@ -19,6 +19,7 @@ This kind of interaction is known as "publish-subscribe".  The subject is the pu
 #Applicablility
 
 Use the Observer pattern in any of the following situations:
+
 1) When an abstraction has two aspects, one dependent on the other.
 
 2) When a change to one object requires changing others, and you don't know howmany objects need to be changed.
