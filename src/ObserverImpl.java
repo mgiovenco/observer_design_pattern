@@ -10,7 +10,7 @@ public class ObserverImpl implements Observer {
 
     @Override
     public void update() {
-        System.out.println("Update method invoked for " + observerName + " from change on subject " + subject);
+        System.out.println("Update method invoked on " + observerName + " from change on subject " + subject);
     }
 
     @Override
