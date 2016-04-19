@@ -18,7 +18,9 @@ This kind of interaction is known as "publish-subscribe".  The subject is the pu
 
 Use the Observer pattern in any of the following situations:
 1) When an abstraction has two aspects, one dependent on the other.
+
 2) When a change to one object requires changing others, and you don't know howmany objects need to be changed.
+
 3) When an object should be able to notify other objects without making assumptions about who these objects are (avoid tightly coupled objects).
 
 #Participants
@@ -43,3 +45,18 @@ ConcreteObserver
 -maintains a reference to ConcreteSubject object
 -stores state that should stay consistent with a subjects
 -implements the observer updating interface to keep its state consistent with the subjects
+
+#Problem solved in example
+
+The observer pattern is meant to solve the problem of notifying classes of a change from another class without tightly coupling the classes together.
+
+To demonstrate this, this demo has 3 main classes:
+
+1) the Main class (which is responsible for instantiating the Observer and Subject implementations)
+
+2) the Subject class (which keeps track of the observer classes and represents the object that the observers care about the state of)
+
+3) the Observer class (which represent the classes that should be notified when a change occurs)
+
+When the program starts, several Observer instances are created and registered to the Subject instance.  When the Subject instance changes its state, this also triggers a notifcation to the Observer classes that a change has occurred.  This in turn, causes an action in them as well.
+
